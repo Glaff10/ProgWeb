@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instituto de computação</title>
+    </head>
+    <body>
+        <h1>Formulário de Contato</h1>
+        <form action>
+            <fieldset>
+                <fieldset>
+                    <legend>Dados Básicos</legend>
+                    Nome <input type="text" name="nome" id="nome"><br>
+                    Email <input type="email" name="email" id="email" required
+                        placeholder="seudominio@dominio.com.br"><br>
+                    Website <input type="url" name="url" id="url"
+                        value="http://"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Seu curso no instituto de computação</legend>
+                    <input type="radio" name="cc" id="cc"> Ciência da Computação
+                    <br>
+                    <input type="radio" name="si" id="si"> Sistemas de
+                    Informação
+                    <br>
+                    <input type="radio" name="ec" id="ec""> Engenharia da
+                    Computação
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Assinale as linguagens já usadas por você:</legend>
+                    <label for="java">
+                        <input type="checkbox" name="languages" value="java">Java
+                    </label>
+                    <label for="c">
+                        <input type="checkbox" name="languages" value="c">C
+                    </label>
+                    <label for="c++">
+                        <input type="checkbox" name="languages" value="c++">C++
+                    </label>
+                    <label for="pearl">
+                        <input type="checkbox" name="languages" value="pearl">Pearl
+                    </label>
+                    <label for="python">
+                        <input type="checkbox" name="languages" value="python">Python
+                    </label>
+                    <label for="js">
+                        <input type="checkbox" name="languages" value="js">JavaScript
+                    </label>
+                    <label for="nada">
+                        <input type="checkbox" name="languages" value="nada">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Dados Complementares</legend>
+                    <label for="favorite_color">Cor favorita:</label>
+                    <input type="color" name="favorite_color"> <br>
+                    <label for="birth_date">Data de nascimento:</label>
+                    <input type="date" name="birth_date"> <br>
+                    <label for="entry_year">Ano de entrada:</label>
+                    <input type="number" name="entry_year" min="2000" max="2023">
+                    <br>
+                    <label for="note_for_site">Nota para este site:</label>
+                    <input type="range" name="note_for_site" min="1" max="5"
+                        value="3">
+                </fieldset>
+                <fieldset>
+                    <legend>Área de atuação</legend>
+                    <select name="field_of_study">
+                        <option value="ciência da computação">Ciência da
+                            computação</option>
+                        <option value="ciência de dados">Ciência de dados</option>
+                        <option value="inteligência artificial">Inteligência
+                            artificial</option>
+                        <option value="aprendizagem de máquina">Aprendizagem de
+                            máquina</option>
+                        <option value="processamento de linguagem natural">Processamento
+                            de linguagem natural</option>
+                        <option value="visão computacional">Visão computacional</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Escreva sua mensagem</legend>
+                    <textarea name="comment" rows="10" cols="50"></textarea>
+                </fieldset>
+                <br>
+                <button type="reset">Resetar Dados</button>
+                <button type="submit">Enviar Mensagem</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
