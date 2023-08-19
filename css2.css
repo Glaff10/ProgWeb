@@ -1,0 +1,34 @@
+
+body {
+    background-color: #b0e0e6;
+}
+
+.inside {
+    width: 80%;
+    height: 100%; 
+    position: absolute; 
+    margin-inline: 200px;
+}
+.inside img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.box {
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    width: 500px;
+    height: fit-content;
+    border: 15px solid #d2a679;
+    box-shadow: 4px 4px 10px 2px gray inset;
+    background-color: rgba(211, 169, 121, 0.5);
+}
+
+.box p {
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
