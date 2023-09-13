@@ -1,0 +1,26 @@
+pode ser usado o seletor de tipo que seria o 
+span{
+    //itens
+}
+
+assim o uso seria:
+
+<span></span>
+
+ou seletor como classe
+
+.span{
+    //itens
+} 
+
+o uso seria:
+<div class="span"></div>
+
+ou como tag
+
+#span{
+    //itens
+}
+
+o uso seria:
+<div title="span"></div>

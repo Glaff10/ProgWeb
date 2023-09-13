@@ -1,0 +1,22 @@
+.container01{
+    display: flex;
+}
+.container02{
+    display: flex;
+    top: -200px;
+}
+.bluebox{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    margin: 10px;
+}
+
+.redbox{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+
