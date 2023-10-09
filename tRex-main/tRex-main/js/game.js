@@ -10,6 +10,8 @@
   let dino;
   let turno;
   let pontuacao;
+  let restart;
+  let botao;
   let nuvens = [];
   let turnoLoop;
   let turnoState = 0; // 0 - dia, 1 - noite
@@ -131,6 +133,22 @@
     }
   }
 
+  class Restart {
+    constructor(){
+      this.element = document.createElement("div");
+      this.element.className = "restart";
+      document.getElementById("game").appendChild(this.element);
+      
+      this.element.addEventListener("click", this.recomecar.bind(this));
+    }
+
+    recomecar(){
+      deserto.element.remove();
+      init();
+      this.element.remove();
+    }
+  }
+
   class Passaro {
     constructor() {
       this.backgroundPositionsX = {
@@ -164,6 +182,22 @@
     mover() {
       this.element.style.backgroundPositionX = this.element.style.backgroundPositionX === this.backgroundPositionsX.praBaixo ? this.backgroundPositionsX.praCima : this.backgroundPositionsX.praBaixo;
       this.element.style.right = `${parseInt(this.element.style.right) + 1}px`;
+      this.detectarColisao();
+    }
+
+    detectarColisao() {
+      const thisRect = this.element.getBoundingClientRect();
+      const dinoRect = dino.element.getBoundingClientRect();
+    
+      if (
+        thisRect.right > dinoRect.left &&
+        thisRect.left < dinoRect.right &&
+        thisRect.bottom > dinoRect.top &&
+        thisRect.top < dinoRect.bottom
+      ) {
+        clearInterval(gameLoop);
+        restart = new Restart();
+      } 
     }
     
   }
