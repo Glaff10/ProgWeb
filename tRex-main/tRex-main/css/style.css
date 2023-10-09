@@ -34,7 +34,10 @@
 
 .pontuacao {
   position: absolute;
-  height: 250;
-  left: 250;
-  z-index: 1;
+  top: 30px;
+  left: 900px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 3;
+  background-color: whitesmoke;
 }

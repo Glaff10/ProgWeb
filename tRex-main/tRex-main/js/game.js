@@ -180,7 +180,7 @@
     constructor(){
       this.element = document.createElement("div");
       this.element.className = "pontuacao";
-      document.getElementById("game").appendChild(this.element);
+      deserto.element.appendChild(this.element);
     }
     
     updateScore() {
