@@ -10,8 +10,6 @@
   let dino;
   let turno;
   let pontuacao;
-  let restart;
-  let botao;
   let nuvens = [];
   let turnoLoop;
   let turnoState = 0; // 0 - dia, 1 - noite
