@@ -10,7 +10,6 @@
   let dino;
   let turno;
   let pontuacao;
-  let passaro; //retirar depois
   let nuvens = [];
   let turnoLoop;
   let turnoState = 0; // 0 - dia, 1 - noite
@@ -138,13 +137,28 @@
         praCima: "-267px",
         praBaixo: "-198px"
       }
+      this.bottons = {
+        alta: "80px",
+        media: "35px",
+        baixa: "10px"
+      }
       this.element = document.createElement("div")
       this.element.className = "passaro";
       this.element.style.right = 0;
       this.element.style.backgroundPositionX = this.backgroundPositionsX.praCima;
       this.element.style.backgroundPositionY = "-2px";
-      this.element.style.bottom = "135px";
+      this.element.style.bottom = this.altura();
       deserto.element.appendChild(this.element)
+    }
+
+    altura(){
+      this.alt = Math.random() * 100;
+      if ( this.alt <= 33) {
+        return this.bottons.baixa;
+      }else if(this.alt <= 66){
+        return this.bottons.media;
+      }
+      return this.bottons.alta;
     }
 
     mover() {
