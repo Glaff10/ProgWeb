@@ -10,6 +10,7 @@
   let dino;
   let turno;
   let pontuacao;
+  let passaro; //retirar depois
   let nuvens = [];
   let turnoLoop;
   let turnoState = 0; // 0 - dia, 1 - noite
@@ -23,6 +24,7 @@
     dino = new Dino();
     turno = new Turno();
     pontuacao = new Pontuacao();
+    passaro = new Passaro();
   }
 
   window.addEventListener("keydown", (e) => {
@@ -130,6 +132,28 @@
     }
   }
 
+  class Passaro {
+    constructor() {
+      this.backgroundPositionsX = {
+        praCima: "-267px",
+        praBaixo: "-198px"
+      }
+      this.element = document.createElement("div")
+      this.element.className = "passaro";
+      this.element.style.right = 0;
+      this.element.style.backgroundPositionX = this.backgroundPositionsX.praCima;
+      this.element.style.backgroundPositionY = "-2px";
+      this.element.style.bottom = "135px";
+      deserto.element.appendChild(this.element)
+    }
+
+    mover() {
+      this.element.style.backgroundPositionX = this.element.style.backgroundPositionX === this.backgroundPositionsX.praBaixo ? this.backgroundPositionsX.praCima : this.backgroundPositionsX.praBaixo;
+      this.element.style.right = `${parseInt(this.element.style.right) + 1}px`;
+    }
+    
+  }
+
   class Nuvem {
     constructor() {
       this.element = document.createElement("div");
@@ -180,6 +204,7 @@
     constructor(){
       this.element = document.createElement("div");
       this.element.className = "pontuacao";
+      this.element.textContent = 0;
       deserto.element.appendChild(this.element);
     }
     
@@ -225,6 +250,7 @@
     
     deserto.mover()
     dino.correr()
+    passaro.mover()
     
     if (Math.random() * 100 <= PROB_NUVEM) nuvens.push(new Nuvem());
     if (frame % 2 === 0) nuvens.forEach(nuvem => nuvem.mover());
