@@ -1,3 +1,6 @@
+Somente o primeiro seletor está correto
+Nota: 0.7
+
 pode ser usado o seletor de tipo que seria o 
 span{
     //itens

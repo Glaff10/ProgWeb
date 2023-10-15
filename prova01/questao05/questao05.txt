@@ -1,2 +1,7 @@
-Há um detalhe de diferença, enquanto o == compara apenas o conteúdo e deixa de lado o tipo dos dois lados da comparação (exemplo: 5=='5' é true) 
-O === compara também o tipo! Logo o exemplo anterior estaria errado.
+Explicação correta. Mas note que falso é diferente de errado.
+Nota: 2.0
+
+Há um detalhe de diferença, enquanto o == compara apenas o conteúdo 
+e deixa de lado o tipo dos dois lados da comparação (exemplo: 5=='5' é true) 
+O === compara também o tipo! Logo o exemplo 
+anterior estaria errado.

@@ -1,31 +1,34 @@
+/* Código não funcional */
+/* Nota: 0.8 */
+
 var Venda = {
     id,
     quantidade,
     preco,
-    construtor : (id, quantidade, preco_un) => {
+    construtor: (id, quantidade, preco_un) => {
         this.id = id;
         this.quantidade = quantidade;
         this.preco_un = preco_un;
     },
-    set_id : (valor) => {
+    set_id: (valor) => {
         this.id = valor;
     },
-    set_quantidade : (valor) => {
+    set_quantidade: (valor) => {
         this.quantidade = valor;
     },
-    set_preco : (valor) => {
+    set_preco: (valor) => {
         this.preco = valor;
     },
-    get_id : () => {
+    get_id: () => {
         return this.id;
     },
-    get_quantidade : (valor) => {
+    get_quantidade: (valor) => {
         return this.quantidade;
     },
-    get_preco : (valor) => {
+    get_preco: (valor) => {
         return this.preco;
     },
-    getValorTotal : () => {
+    getValorTotal: () => {
         return this.preco * this.quantidade;
     }
 }
